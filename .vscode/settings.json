@@ -1,0 +1,23 @@
+{
+  "editor.defaultFormatter": "biomejs.biome",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+
+  "cSpell.words": [
+    "forgebyd",
+    "dwi",
+    "payana",
+    "commitlint",
+    "nodenext",
+    "publint"
+  ]
+}
