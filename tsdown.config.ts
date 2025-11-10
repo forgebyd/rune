@@ -8,13 +8,12 @@ export default defineConfig({
   report: true,
   sourcemap: true,
   treeshake: true,
-
   unused: true,
 
   platform: 'node',
   target: 'es2020',
 
-  format: ['cjs', 'esm'],
+  format: 'esm',
 
   banner: [
     '/**',
