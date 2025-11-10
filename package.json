@@ -20,9 +20,14 @@
     "node": ">=24.11.0"
   },
   "scripts": {
+    "build": "tsdown",
     "biome.format": "biome format --write",
     "biome.lint": "biome lint --write --unsafe",
     "commit": "commit",
+    "package.list": "pnpm --recursive --depth=-1 list",
+    "package.lint": "pnpm run package.lint.examples && pnpm run package.lint.packages",
+    "package.lint.examples": "publint examples/*",
+    "package.lint.packages": "publint packages/*",
     "prepare": "husky",
     "prettier.format": "prettier --write",
     "prettier.lint": "prettier --check",
@@ -37,7 +42,10 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
+    "publint": "^0.3.15",
+    "tsdown": "^0.16.1",
     "tsx": "^4.20.6",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "unplugin-unused": "^0.5.6"
   }
 }
