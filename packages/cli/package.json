@@ -1,0 +1,60 @@
+{
+  "name": "@rune/cli",
+  "description": "The CLI for Rune, a flexible and expressive code generator",
+  "license": "MIT",
+  "version": "0.0.0",
+  "type": "module",
+  "author": {
+    "name": "Forgebyd",
+    "email": "ini.dwiii@gmail.com",
+    "url": "https://github.com/forgebyd"
+  },
+  "homepage": "https://github.com/forgebyd/rune",
+  "readme": "https://github.com/forgebyd/rune/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forgebyd/rune.git"
+  },
+  "volta": {
+    "node": "24.11.0",
+    "pnpm": "10.20.0"
+  },
+  "bin": {
+    "rune": "./dist/cli.mjs"
+  },
+  "exports": {
+    ".": {
+      "dev": "./source/index.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">20.0.0 || >=24.11.0"
+  },
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "keywords": [
+    "forgebyd",
+    "rune",
+    "cli",
+    "command",
+    "command-line",
+    "generator",
+    "file-generator",
+    "code-generator",
+    "automation",
+    "initialization",
+    "productivity",
+    "scaffolding"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "package.lint": "publint"
+  }
+}
