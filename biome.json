@@ -34,7 +34,13 @@
         "recommended": true,
         "noGlobalDirnameFilename": "error",
         "noUndeclaredVariables": "error",
-        "useImportExtensions": "error",
+        "useImportExtensions": {
+          "level": "error",
+          "fix": "safe",
+          "options": {
+            "forceJsExtensions": true
+          }
+        },
         "useJsonImportAttributes": "error"
       },
       "nursery": {
