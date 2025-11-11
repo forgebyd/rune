@@ -31,19 +31,18 @@
     "prepare": "husky",
     "prettier.format": "prettier --write",
     "prettier.lint": "prettier --check",
-    "typecheck": "tsc --noEmit && echo 'Typecheck passed!'"
+    "typecheck": "pnpm --recursive run typecheck"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.4",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@commitlint/prompt-cli": "^20.1.0",
-    "@types/node": "^24.10.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
     "publint": "^0.3.15",
-    "tsdown": "^0.16.1",
+    "tsdown": "catalog:",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "unplugin-unused": "^0.5.6"
