@@ -59,7 +59,8 @@
     "start": "node dist/cli.mjs",
     "start.dev": "node --conditions dev dist/cli.mjs",
     "dev": "tsx --conditions dev bin/cli.ts",
-    "package.lint": "publint"
+    "package.lint": "publint",
+    "typecheck": "tsc --noEmit && echo '@rune/cli: Typecheck passed'"
   },
   "dependencies": {
     "@gunshi/bone": "^0.26.3",
