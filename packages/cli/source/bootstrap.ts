@@ -5,6 +5,7 @@ import { castCommand } from './commands/cast.js';
 import { craftCommand } from './commands/craft.js';
 import { tomeCommand } from './commands/tome.js';
 import { addGlobalPlugin } from './plugins/add-global.js';
+import { trackRuntimePlugin } from './plugins/track-runtime.js';
 import type { CommandHandlerType, CommandNameType } from './types/command.js';
 import type { PluginDefinitionType } from './types/plugin.js';
 
@@ -33,6 +34,7 @@ const loadPlugins = (): BootstrapContextType['plugins'] => {
   registry.push(pluginGlobal());
   registry.push(pluginRenderer());
   registry.push(addGlobalPlugin());
+  registry.push(trackRuntimePlugin());
 
   return registry;
 };
