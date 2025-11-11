@@ -33,7 +33,7 @@
     "./package.json": "./package.json"
   },
   "engines": {
-    "node": ">20.0.0 || >=24.11.0"
+    "node": ">=20.0.0"
   },
   "files": [
     "dist",
