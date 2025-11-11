@@ -18,7 +18,6 @@ const commandDefinition: CommandDefinitionType<CastCommandParams> = define({
     generator: defineSchema({
       type: 'positional',
       description: 'The generator or action to run',
-      required: true,
     }),
   },
 });

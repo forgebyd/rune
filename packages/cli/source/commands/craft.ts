@@ -18,7 +18,6 @@ const commandDefinition: CommandDefinitionType<CraftCommandParams> = define({
     type: defineSchema({
       type: 'positional',
       description: 'The type of item to generate (e.g., generator, action)',
-      required: true,
     }),
   },
 });
