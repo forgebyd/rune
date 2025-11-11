@@ -13,7 +13,8 @@
   "readme": "https://github.com/forgebyd/rune/blob/main/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/forgebyd/rune.git"
+    "url": "git+https://github.com/forgebyd/rune.git",
+    "directory": "packages/cli"
   },
   "volta": {
     "node": "24.11.0",
@@ -66,5 +67,9 @@
     "@gunshi/plugin": "^0.26.3",
     "@gunshi/plugin-global": "^0.26.3",
     "@gunshi/plugin-renderer": "^0.26.3"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "tsdown": "catalog:"
   }
 }

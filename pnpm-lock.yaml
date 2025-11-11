@@ -4,6 +4,15 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@types/node':
+      specifier: ^24.10.0
+      version: 24.10.0
+    tsdown:
+      specifier: ^0.16.1
+      version: 0.16.1
+
 importers:
 
   .:
@@ -20,9 +29,6 @@ importers:
       '@commitlint/prompt-cli':
         specifier: ^20.1.0
         version: 20.1.0(@types/node@24.10.0)(typescript@5.9.3)
-      '@types/node':
-        specifier: ^24.10.0
-        version: 24.10.0
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -36,7 +42,7 @@ importers:
         specifier: ^0.3.15
         version: 0.3.15
       tsdown:
-        specifier: ^0.16.1
+        specifier: 'catalog:'
         version: 0.16.1(publint@0.3.15)(typescript@5.9.3)(unplugin-unused@0.5.6)
       tsx:
         specifier: ^4.20.6
@@ -47,12 +53,6 @@ importers:
       unplugin-unused:
         specifier: ^0.5.6
         version: 0.5.6
-
-  examples/authx:
-    dependencies:
-      '@rune/cli':
-        specifier: workspace:*
-        version: link:../../packages/cli
 
   packages/cli:
     dependencies:
@@ -71,6 +71,13 @@ importers:
       '@gunshi/plugin-renderer':
         specifier: ^0.26.3
         version: 0.26.3(@gunshi/plugin-i18n@0.26.3(@gunshi/plugin-global@0.26.3))
+    devDependencies:
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.10.0
+      tsdown:
+        specifier: 'catalog:'
+        version: 0.16.1(publint@0.3.15)(typescript@5.9.3)(unplugin-unused@0.5.6)
 
 packages:
 
