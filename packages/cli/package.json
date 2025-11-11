@@ -24,10 +24,10 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/index.d.mts",
       "dev": "./source/index.ts",
       "import": "./dist/index.mjs",
-      "default": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
+      "default": "./dist/index.mjs"
     },
     "./package.json": "./package.json"
   },
@@ -55,6 +55,16 @@
   ],
   "scripts": {
     "build": "tsdown",
+    "start": "node dist/cli.mjs",
+    "start.dev": "node --conditions dev dist/cli.mjs",
+    "dev": "tsx --conditions dev bin/cli.ts",
     "package.lint": "publint"
+  },
+  "dependencies": {
+    "@gunshi/bone": "^0.26.3",
+    "@gunshi/definition": "^0.26.3",
+    "@gunshi/plugin": "^0.26.3",
+    "@gunshi/plugin-global": "^0.26.3",
+    "@gunshi/plugin-renderer": "^0.26.3"
   }
 }

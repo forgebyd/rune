@@ -54,7 +54,23 @@ importers:
         specifier: workspace:*
         version: link:../../packages/cli
 
-  packages/cli: {}
+  packages/cli:
+    dependencies:
+      '@gunshi/bone':
+        specifier: ^0.26.3
+        version: 0.26.3
+      '@gunshi/definition':
+        specifier: ^0.26.3
+        version: 0.26.3
+      '@gunshi/plugin':
+        specifier: ^0.26.3
+        version: 0.26.3
+      '@gunshi/plugin-global':
+        specifier: ^0.26.3
+        version: 0.26.3
+      '@gunshi/plugin-renderer':
+        specifier: ^0.26.3
+        version: 0.26.3(@gunshi/plugin-i18n@0.26.3(@gunshi/plugin-global@0.26.3))
 
 packages:
 
@@ -378,6 +394,37 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@gunshi/bone@0.26.3':
+    resolution: {integrity: sha512-OyVySvJuK8dkaelPb9sr5aLaORo88CFLNX/BHKFB7nqm1NBPZCIbWDOiSRu83BeSkeAjpxYdgExCse77yPrmZg==}
+    engines: {node: '>= 20'}
+
+  '@gunshi/definition@0.26.3':
+    resolution: {integrity: sha512-9vRVY69CosqVQFneq3perN/SmQ+S9OzKKgbhHj0TDR9Z+ii14o3ybMg5ol2omnXSTAXappSPK4l0hHJdGFZuPQ==}
+    engines: {node: '>= 20'}
+
+  '@gunshi/plugin-global@0.26.3':
+    resolution: {integrity: sha512-TdJ7UN0i+1FBBPPlklHT2psCxvKP6qHNf/Am9op0xbU0gB7HFHqBBnUWCf1TbDrru+jm5c+sUM4jUiQBk6yZyA==}
+    engines: {node: '>= 20'}
+
+  '@gunshi/plugin-i18n@0.26.3':
+    resolution: {integrity: sha512-ShpzTPcDzYj9YOU+sI5jAXpgIUQg1M81cTfeC6jROwyFwxXhj2DxE5VjhhZd4SHN05rB2SKlftsuw9muY03a/Q==}
+    engines: {node: '>= 20'}
+    peerDependencies:
+      '@gunshi/plugin-global': 0.26.3
+    peerDependenciesMeta:
+      '@gunshi/plugin-global':
+        optional: true
+
+  '@gunshi/plugin-renderer@0.26.3':
+    resolution: {integrity: sha512-lUz3HBT50U4auH3sCIL8ddVrS6RfKnB2HkQDuYzTC6dBc3U+DHiLoY8ZjZI4wiaOPO/snPAX7a3TqCQyyOmSog==}
+    engines: {node: '>= 20'}
+    peerDependencies:
+      '@gunshi/plugin-i18n': 0.26.3
+
+  '@gunshi/plugin@0.26.3':
+    resolution: {integrity: sha512-l4D63qkUtHC34bkuIcSKZd1UWkIrt1ExfW7Ag72hvkD/WpnlwO+s9E5515nPSadpwhnkmKm6YJ5ODgMX4SRUQQ==}
+    engines: {node: '>= 20'}
 
   '@inquirer/external-editor@1.0.3':
     resolution: {integrity: sha512-RWbSrDiYmO4LbejWY7ttpxczuwQyZLBUyygsA9Nsv95hpzUWwnNTVQmAq3xuh7vNwCp07UTmE5i11XAEExx4RA==}
@@ -1610,6 +1657,27 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.12':
     optional: true
+
+  '@gunshi/bone@0.26.3': {}
+
+  '@gunshi/definition@0.26.3': {}
+
+  '@gunshi/plugin-global@0.26.3':
+    dependencies:
+      '@gunshi/plugin': 0.26.3
+
+  '@gunshi/plugin-i18n@0.26.3(@gunshi/plugin-global@0.26.3)':
+    dependencies:
+      '@gunshi/plugin': 0.26.3
+    optionalDependencies:
+      '@gunshi/plugin-global': 0.26.3
+
+  '@gunshi/plugin-renderer@0.26.3(@gunshi/plugin-i18n@0.26.3(@gunshi/plugin-global@0.26.3))':
+    dependencies:
+      '@gunshi/plugin': 0.26.3
+      '@gunshi/plugin-i18n': 0.26.3(@gunshi/plugin-global@0.26.3)
+
+  '@gunshi/plugin@0.26.3': {}
 
   '@inquirer/external-editor@1.0.3(@types/node@24.10.0)':
     dependencies:
