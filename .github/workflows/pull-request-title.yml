@@ -23,8 +23,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           types: |
+            build
+            chore
+            ci
+            docs
             feat
             fix
+            perf
+            refactor
+            revert
+            style
+            test
           requireScope: false
           scopes: |
             cli
@@ -33,8 +42,10 @@ jobs:
             caster
             glyph
             essence
+            [a-z]+
           disallowScopes: |
             release
+            ![A-Z]+
           subjectPattern: ^(?![A-Z]).+$
           subjectPatternError: >
             The subject "{subject}" found in the pull request title "{title}" didn't match the configured pattern. Please ensure that the subject doesn't start with an uppercase character.
