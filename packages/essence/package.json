@@ -1,0 +1,69 @@
+{
+  "name": "@rune/essence",
+  "description": "The Essence type-def for Rune, a flexible and expressive code generator",
+  "license": "MIT",
+  "version": "0.0.0",
+  "type": "module",
+  "author": {
+    "name": "Forgebyd",
+    "email": "ini.dwiii@gmail.com",
+    "url": "https://github.com/forgebyd"
+  },
+  "homepage": "https://github.com/forgebyd/rune",
+  "readme": "https://github.com/forgebyd/rune/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forgebyd/rune.git",
+    "directory": "packages/essence"
+  },
+  "volta": {
+    "node": "24.11.0",
+    "pnpm": "10.20.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "dev": "./source/index.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "keywords": [
+    "forgebyd",
+    "rune",
+    "essence",
+    "command",
+    "command-line",
+    "generator",
+    "file-generator",
+    "code-generator",
+    "automation",
+    "initialization",
+    "productivity",
+    "scaffolding",
+    "type",
+    "type-definition"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "start": "node dist/cli.mjs",
+    "start.dev": "node --conditions dev dist/cli.mjs",
+    "dev": "tsx --conditions dev bin/cli.ts",
+    "package.lint": "publint",
+    "typecheck": "tsc --noEmit && echo '@rune/cli: Typecheck passed'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "tsdown": "catalog:"
+  }
+}
