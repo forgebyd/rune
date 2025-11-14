@@ -27,6 +27,24 @@
       "import": "./dist/index.mjs",
       "default": "./dist/index.mjs"
     },
+    "./consts": {
+      "types": "./dist/consts.d.mts",
+      "dev": "./source/consts/index.ts",
+      "import": "./dist/consts.mjs",
+      "default": "./dist/consts.mjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.mts",
+      "dev": "./source/types/index.ts",
+      "import": "./dist/types.mjs",
+      "default": "./dist/types.mjs"
+    },
+    "./utilities": {
+      "types": "./dist/utilities.d.mts",
+      "dev": "./source/utilities/index.ts",
+      "import": "./dist/utilities.mjs",
+      "default": "./dist/utilities.mjs"
+    },
     "./package.json": "./package.json"
   },
   "engines": {

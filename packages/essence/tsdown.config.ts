@@ -5,6 +5,9 @@ export default defineConfig({
 
   entry: {
     index: 'source/index.ts',
+    consts: 'source/consts/index.ts',
+    types: 'source/types/index.ts',
+    utilities: 'source/utilities/index.ts',
   },
   outputOptions: {
     dir: 'dist',
